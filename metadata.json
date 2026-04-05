@@ -1,0 +1,5 @@
+{
+  "name": "Dr. Bindra Dental Care Centre",
+  "description": "Premium dental clinic in Ambala Cantt providing modern, trust-building dental care services.",
+  "requestFramePermissions": ["geolocation"]
+}

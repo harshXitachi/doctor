@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&family=Alex+Brush&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Outfit", sans-serif;
+  --font-serif: "Playfair Display", serif;
+  --font-script: "Alex Brush", cursive;
+
+  /* Ultra-premium earthy palette */
+  --color-primary: #0F1A15; /* Even deeper Forest Green/Black */
+  --color-primary-light: #1F3027;
+  --color-secondary: #B59A7A; /* Refined Muted Gold */
+  --color-accent: #D48C70; /* Soft Terracotta */
+  --color-soft-white: #EFECE6; /* Warmer, more organic Sand */
+  --color-dental-blue: #E5E1D8; /* Darker Sand for subtle contrast */
+}
+
+@layer base {
+  body {
+    @apply bg-soft-white text-primary font-sans antialiased;
+    /* Remove default smooth scroll as we will use Lenis */
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display tracking-tight;
+  }
+}
+
+/* Remove boxy glass cards, use elegant thin lines and flat surfaces */
+.editorial-border {
+  @apply border-t border-primary/10;
+}
+
+.gradient-text {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary;
+}
+
+.section-padding {
+  @apply py-32 md:py-48 px-6 md:px-12 lg:px-24;
+}
+
+/* Custom minimal scrollbar */
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-track {
+  background: #EFECE6;
+}
+::-webkit-scrollbar-thumb {
+  background: #0F1A15;
+}
+
+/* Hide scrollbar for horizontal scroll sections */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
